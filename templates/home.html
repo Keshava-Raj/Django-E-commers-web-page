@@ -1,0 +1,298 @@
+{% load static %}
+
+
+<!doctype html>
+  <html lang="en" data-bs-theme="auto">
+    <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Ais E-Bikes Rentals</title>
+    <link rel="stylesheet" href="{% static 'css/Stylesheet.css' %}">
+    {% include "cdnlines.html" %}
+
+    
+
+</head>
+<body class="body-style">   
+ 
+
+{% block content %}
+
+<header data-bs-theme="dark">``
+  <div class="bgcolor" >
+  <nav class="navbar navbar-expand-md navbar-dark  fixed-top bg-dark">
+    <div class="container-fluid">
+      <div class="nav-bar" >
+        <a class="navbar-brand" href="{% url 'home' %}">Ais E-Bikes Rentals</a>
+          <img src="{% static 'images/image1.png' %}" class="logo">
+          <ul >
+          <li  class="btn btn-outline-success" >
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+            <li  class="btn btn-outline-success">
+            <a href="{% url 'contact' %}">Contact</a>
+          </li>
+         <!--  <div class="sub-bar">              #subnavbar
+            </div> -->
+          
+          <li  class="btn btn-outline-success">
+            <a class="nav-link" href="{% url 'about' %}" >About</a>
+          </li>
+          <li  class="btn btn-outline-success nav_bar12">
+            <a class="nav-link" href="{% url 'register' %}" > Signup </a>
+            <div class="sub-bar">
+              <ul>
+                <li  class="btn btn-outline-success">
+                  <a href="{% url 'userlogin' %}" >Bike User </a>
+                </li>
+                <li  class="btn btn-outline-success">
+                  <a href="{% url 'provider' %}">Vehicles Provider</a> 
+                </li>
+              </div>
+          </li>
+        
+      </div>
+          
+      </ul>
+    </div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    
+  </div>
+</nav>
+</div>
+</header>
+<main>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src= "{%static 'images/image13.jpg' %}" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      </div>
+      <div class="carousel-item">
+        <img src="{%static 'images/image16.jpg' %}" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      </div>
+      <div class="carousel-item">
+        <img src= "{%static 'images/image11.jpg' %}" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<hr>
+
+  <div class="container-fluid style3">
+    <div class="row style3">
+ 
+      <div class="col-md-4 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'images/image4.jpg' %}"  height="150" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Bajaj Palsar </h5>
+            <p class="card-text">Prise &#160; &#160; &#160; &#160;&#160; &emsp;&emsp;&emsp; : 2,90,000 <br>
+              Company Name   &#160; : Bajaj Palsar <br>
+              Engine &#160; &#160; &#160; &#160;&#160; &emsp;&emsp; :120cce <br>
+              Color &#160; &#160; &#160; &#160;&#160; &emsp;&emsp; &#160; :Blue <br>
+              mailedge &emsp;&emsp;   &emsp; : 40Km/L <br> </p>
+            <a href="{% url 'userlogin' %}" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'images/image5.jpg' %}" class="card-img-top" height="150" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Bajaj Palsar </h5>
+            <p class="card-text">Prise &#160; &#160; &#160; &#160;&#160; &emsp;&emsp;&emsp; : 2,20,000 <br>
+              Company Name   &#160; : Bajaj Palsar <br>
+              Engine &#160; &#160; &#160; &#160;&#160; &emsp;&emsp; :150cce <br>
+              Color &#160; &#160; &#160; &#160;&#160; &emsp;&emsp; &#160; :Sillver <br>
+              mailedge &emsp;&emsp;   &emsp; : 30Km/L <br> </p>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+      </div>
+    </div>
+      </div>
+
+      <div class="col-md-4 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'images/image1.jpg' %}"  height="150" class="card-img-top" alt="image1">
+          <div class="card-body">
+            <h5 class="card-title text-center">Activa Scooty </h5>
+            <p class="card-text">Prise &#160; &#160; &#160; &#160;&#160; &emsp;&emsp;&emsp; : 80,000 <br>
+              Company Name   &#160; : Bajaj Palsar <br>
+              Engine &#160; &#160; &#160; &#160;&#160; &emsp;&emsp; :60cce <br>
+              Color &#160; &#160; &#160; &#160;&#160; &emsp;&emsp; &#160; : Red and silver <br>
+              mailedge &emsp;&emsp;   &emsp; : 60Km/L <br> </p>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+        </div>
+        </div>
+
+ 
+        
+      </div>
+
+      </div>
+      </div>
+    </div>
+
+    <!-- START THE FEAT  URETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7" class="img-fluid">
+        <h2 class="featurette-heading fw-normal lh-1">And lastly, this one.</h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <img src= "{% static 'images/image50.jpeg' %}" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+
+      </div>
+    </div>
+
+
+ <hr class="featurette-divider" class="bgcolor">
+   <div class="container-fluid bgcolor" >  
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Our  Chairmen Words
+        </h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+    <img src="{% static 'images/image35.jpeg' %}" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+
+      </div>
+    </div>
+   </div> 
+
+  <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 text-center" class="img-fluid">
+        <h2 class="featurette-heading fw-normal lh-1">Know Us Better </h2>
+        <p class="lead"> 
+          We have crossed 10 million happy customers and 100 million rides. Rapido is here to revolutionize intra-city
+           travel as we bring you redefined comfort and 
+          convenience with our disruptive service model.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{% static 'images/image46.jpeg' %}" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider"> 
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+
+{% endblock %}
+
+
+
+
+                     <!-- login page -->
+  
+<form method="POST" classs="login_page" > 
+  {% csrf_token %}
+<div class="styles-login" >
+   <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog Margin2">
+ <div class="modal-content Margin3">
+<div class="modal-header Margin3">
+<div class="container">
+    <h2>
+   <img src="{% static 'images/image1.png' %}" class="logo3 " >
+      <a href= "#"></a> Ais E-Bike Rentals </h2><hr>
+           <h2>Login</h2>
+            <form id="loginForm" >
+                <input type="text" id="username" name ="email1" placeholder="Username" required>
+                <input type="password" id="password" name ="passwrd1" placeholder="Password" required>
+               <a href="{% url 'dashboard' %}" > <input type="submit" action="" value="Login"> <br><br></a>
+                <H6 class="text-center"> Or</H6><hr>
+               <input type="register" value="Register">
+ </form>
+<p class="error-message" id="errorMessage"></p>
+</div>
+</div>
+ </div>
+    </div>
+ </div> 
+ </form>
+                                      <!-- FOOTER  -->
+<footer class="footer">
+  <div class="container1231" >
+
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <img src= "{% static 'images/image1.png' %}" class="logo2 " height="80" width="90" ><br><br>
+        <h3><a href="contact.html">Ais E-Bikes Rentals</a> </h3>
+           
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Socieal Media Apps</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item  mb-2"><a href="#" class="nav-link p-0  text-body-warning">Our Youtube Channel</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Whatsapp</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Telegrame</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5> Contact Us</h5> 
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">📞: 7889889789</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning"> 📧 Chitti@AisCompany.com </a></li>
+        <li class="nav-item mb-2"><a href="{% url 'home' %}" class="nav-link p-0 text-body-warning">Home</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'about' %}" class="nav-link p-0 text-body-warning">About Us</a></li>
+        <li class="nav-item mb-2"> <a href="{% url 'contact' %}" class="nav-link p-0 text-body-warning">Contact Us</a></li>
+      </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <h3>About Us</h3>
+        <p>Ais E-bike company is provide the Rental Bikes which is <br>
+          usefull for your Regular works and We Create income for  <br>
+           the people who have Bike and it is not usefull   <br>
+          for them </p>   
+      
+          </div>
+        </form>
+      </div>
+    </div>
+
+    </div>
+
+
+    </div>
+  
+  </footer>
+
+</main>      
+  </body>
+</html>
+]

@@ -1,0 +1,220 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title> User DashBord</title>
+<link rel="stylesheet" href="{% static 'css/Stylesheet.css' %}">
+    {% include 'cdnlines.html' %}
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background: url('laptop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      nav{
+        margin-top:-48px;
+        background-color: #EDE6CD;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      }
+      nav ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      nav li{
+        height: 50px;
+      }
+      nav a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+      }
+      nav a:hover{
+        background-color: #f0f0f0;
+      }
+      nav li:first-child{
+        margin-right: auto;
+      }
+      .sidebar{
+        position: fixed;
+        top: 0; 
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .sidebar li{
+        width: 100%;
+      }
+      .sidebar a{
+        width: 100%;
+      }
+      .menu-button{
+        display: none;
+      }
+      @media(max-width: 800px){
+        .hideOnMobile{
+          display: none;
+        }
+        .menu-button{
+          display: block;
+        }
+      }
+      @media(max-width: 400px){
+        .sidebar{
+          width: 100%;
+        }
+      }
+    footer{
+        margin:-20px;
+    }
+    .margin_style{
+        margin-top:left;
+    }
+    .margin_s1tyle{
+        margin-top:center;
+    }
+
+    /* body */
+    .container-132{
+      height:400px;
+      width:1180px;
+      background-image: url("{%static 'images/image-bg1.jpg' %}") ; 
+      color : skyblue ;
+      
+    }
+    .profile{
+      height:200px;
+      width:200px;
+      border-radius:50%;
+      margin-left:150px;
+      justify-content:center;
+    }
+    h4{
+     
+      margin-left:20px;
+    }
+    .addvaikv{
+      margin-bottom:-280px;
+      margin-left: -150px ;
+    }
+    
+
+</style>
+
+
+    
+
+</head>
+<body class="body-style">  
+
+        <nav>
+        <ul>
+          
+          <li><a href="#">Hello!! Vehicles Provider {{ provider.name }} </a></li>
+        
+          <img src="{% static 'images/image1.png' %}" class="logo">
+          <li class="hideOnMobile"><a href="{% url 'sucssessfulllogin' %}">Profile</a></li>
+          <li class="hideOnMobile"><a href="{% url 'textfile' %}">Vehicles</a></li>
+          <li class="hideOnMobile"><a href="{% url 'logout' %}">logout</a></li>
+        </ul>
+      </nav>
+
+  {% block text %}
+
+  {% endblock  %}
+             
+      
+        
+        <hr>
+                                              <!-- FOOTER  -->
+<br>
+<footer class="footer">
+  <div class="container1231" >
+
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <img src= "{% static 'images/image1.png' %}" class="logo2 " height="80" width="90" ><br><br>
+        <h3><a href="contact.html">Ais E-Bikes Rentals</a> </h3>
+           
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Socieal Media Apps</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item  mb-2"><a href="#" class="nav-link p-0  text-body-warning">Our Youtube Channel</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Whatsapp</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Telegrame</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5> Contact Us</h5> 
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">📞: 7889889789</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning"> 📧 Chitti@AisCompany.com </a></li>
+        <li class="nav-item mb-2"><a href="{% url 'home' %}" class="nav-link p-0 text-body-warning">Home</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'about' %}"class="nav-link p-0 text-body-warning">About Us</a></li>
+        <li class="nav-item mb-2"> <a href="{% url 'contact' %}" class="nav-link p-0 text-body-warning">Contact Us</a></li>
+      </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <h3>About Us</h3>
+        <p>Ais E-bike company is provide the Rental Bikes which is <br>
+          usefull for your Regular works and We Create income for  <br>
+           the people who have Bike and it is not usefull   <br>
+          for them </p>   
+      
+          </div>
+        </form>
+      </div>
+    </div>
+
+    </div>
+
+
+</div>
+  
+  </footer>
+ <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+  </script>
+
+</main>      
+  </body>
+</html>
+

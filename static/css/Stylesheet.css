@@ -1,0 +1,460 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: rgb(var(--bs-tertiary-color-rgb));
+    
+}
+.carousel {
+  margin-bottom: 4rem;
+}
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+.carousel-item {
+  height: 32rem;
+}
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+.featurette-divider {
+  margin: 5rem 0; 
+}
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+.color-same{
+  background: black; 
+}
+.border{
+   
+     border: 20% solid;
+     padding: 10%;
+     margin: 10%;
+}
+
+.bgcolor{
+
+   background-color:black;
+   color: white;
+}
+.color-move:hover  {
+    
+   color: aquamarine;
+   opacity: 0.5;
+   font-family:'lato', sans-serif;
+}
+
+.styles-login{
+ background-color:darkcyan;
+  background-image:url(2wCEAAoHCBYVFBcVFRUXFxcZGRcYGhoaGiAZHRkaGRcYGRkgGRoaICwjHR0pIBkXJDYkKS0vMzMzGSI4PjgyPSwyMy8BCwsLDw4PHRISHjIpIio6Mjo0NDQ6MjIyMjIyMjIyMjIyNDI0OjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv);
+}
+
+
+.nav-bar{
+    background:rgba(0, 0, 0, 0.178);
+    height: 60px;
+    text-align:right;
+}
+
+.nav-bar ul{
+  
+  display: inline-flex;
+  list-style:none;
+  color: black;
+}
+
+.nav-bar ul li{
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+  font-size: 100%;
+}
+
+.nav-bar ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+ .nav .nav-bar ul li:hover{
+  background:black;
+  border-radius: 3px;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.sub-bar{
+  display: none; 
+}
+
+.nav-bar ul li:hover .sub-bar {
+  display: block;
+  position: absolute;
+  background:black;
+  margin: 15px;
+  border-radius:6px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.5s;
+} 
+
+.nav-bar ul li:hover .sub-bar ul{
+  display: block;
+  position: absolute;
+  background:rgba(0, 0, 0, 0.705);
+  margin: 10px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.5s;
+
+  
+}
+
+.nav-bar ul li:hover .sub-bar ul li{
+  width:150px;
+  padding: 7px;
+  margin: 7px;
+  border-bottom: 1px dotted #fff;
+  background: transparent;
+  border-radius:10px ;
+  text-align:center; 
+  
+}
+
+.nav-bar ul li:hover .sub-bar ul li:last-child{
+  border-bottom:none;
+
+}
+
+.nav-bar ul li:hover .sub-bar ul li a:hover{
+  color:skyblue;  
+} 
+
+
+
+/* ------- Buttos Style-----*/
+
+#button-style{
+  background:orange;
+  color: black;
+}
+
+#button-style:hover{
+  background:gold;
+  color: black;
+}
+
+#button-style-cart{
+  background:aqua;
+  color: black;
+}
+
+#button-style-cart:hover{
+  background:rgb(19, 227, 19);
+  color: black;
+}
+
+
+.body-style{
+  background:url( https://wallpaper-house.com/data/out/9/wallpaper2you_364323.jpg) ;
+  color: #fff;
+  
+}
+
+footer{
+  color:#fff;
+  background: black;
+}
+a{
+  text-decoration: none;
+}
+
+.size_style{
+  size: 100%;
+}
+
+
+.logo{
+  height: 30px;
+  width:30px ;
+  border-radius:50% ;
+}
+
+.Margin1{
+  text-align:inline;
+  background: darkslateblue;
+  margin:50px;
+}
+.Margin1 input{
+  background: lightslategrey;
+} 
+
+.Margin2{
+  margin-top:40px;
+  margin-bottom:50px;
+  background: indigo;
+  padding:20px ;
+  border-radius:7% ;
+}
+.Margin3{
+  border-radius:7%;
+  background: darkslategray;
+ margin: 0%;
+  padding:10px ;
+}
+
+
+.logo2{
+  height: 70px;
+  width:72px ;
+  border-radius:50% ;
+  margin: 6px;
+  padding: 10px;
+}
+
+                                    
+
+
+.container6 {
+  width: 300px;
+  height:700px ;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+}
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input536 {
+  width: 100%;
+  background-color: #0de3dc;
+  color: rgb(14, 1, 1);
+  padding: 8px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input536:hover {
+  background-color: hwb(166 10% 24%);
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.logo3{
+  width:40px ;
+  height:35px ;
+  border-radius: 50%;
+}
+
+
+
+                    /*--------------------    Footer------------------- ----------------- */
+
+
+                    .footer {
+                      background-image: url("c:\Users\lenovo\Pictures\image 11.jpg");
+                      color: #fff;
+                      padding: 20px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    }
+                    .footer .contact {
+                      flex: 1;
+                    }
+                    .footer .social {
+                      flex: 1;
+                      text-align: right;
+                    }
+                    .footer .about {
+                      flex: 1;
+                      text-align: center;
+                    }
+                    .footer .contact ul, .footer .social ul {
+                      list-style-type: none;
+                      padding: 0;
+                      margin: 0;
+                    }
+                    .footer .contact ul li, .footer .social ul li {
+                      margin-bottom: 10px;
+                    }
+                    .footer .social a {
+                      direction: none;
+                      margin-right: 10px;
+                      color:white;
+                    }
+                   
+
+
+                        /*-------------------- Contact ------------------- ----------------- */
+
+                        .image212{
+                          align-items:center ;
+                          background-image: url("https://wallpapercave.com/wp/wp2019274.jpg" );
+                          margin:120px ;
+                          color:black ;
+                  
+                  }
+                  
+                  .textt4{
+                  direction : none ;
+                  margin-right: 10px;
+                  color:rgb(0, 15, 10);
+                  direction: none;
+                  
+                  }
+                  .image21{
+                      align-items:center ;
+                      margin:130px ;
+                     
+                  
+                  }
+                  .imagee{
+                      margin:140px;
+                      padding:12px ;
+                      border-radius:40px ;
+                  }
+                  .input23{
+                      background:rgba(92, 182, 255, 0);
+                  }
+                  .image43{
+                      align-items:center ;
+                      background-image: url("https://www.betterup.com/hubfs/Marketing-manager-presenting-charts-on-screen-at-team-meeting-best-jobs-with-business-degree.jpg#keepProtocol " );
+                  }
+
+
+
+
+
+
+                          /*        about Us      */
+
+.text_center{
+  background: rgba(3, 42, 36, 0.851) ;
+  color:rgb(126, 245, 229);
+
+}
+.text_center1{
+  color:white; 
+  font-display:baseline ;
+  align-items: baseline;
+}
+
+.stackr43{
+
+align-items :center;
+
+}
+
+
+
+
+
+                                       /*     Register form        */
+                                       .bodyR {
+                                        font-family: Arial, sans-serif;
+                                        background-color: #022d22;
+                                        margin: 20px;
+                                        padding: 20px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 100vh;
+                                    }
+                                
+                                    .register_form {
+                                        background-color: #72b4fa;
+                                        padding: 30px;
+                                        border-radius: 10px;
+                                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                                        max-width: 400px;
+                                        width: 100%;
+                                        padding: 20px;
+                                        margin: 100px;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                
+                                    .h2R {
+                                        text-align: center;
+                                        margin-bottom: 20px;
+                                        color: black;
+                                    }
+                                
+                                    .register_input {
+                                        width: 100%;
+                                        padding: 10px;
+                                        margin-bottom: 20px;
+                                        border: 1px solid #ccc;
+                                        border-radius: 5px;
+                                        box-sizing: border-box;
+                                    }
+                                
+                                    .register_btn {
+                                        width: 100%;
+                                        background-color: #4CAF50;
+                                        color: rgb(221, 222, 222);
+                                        padding: 10px;
+                                        border: none;
+                                        border-radius: 5px;
+                                        cursor: pointer;
+                                    }
+                                
+                                    .register_btn:hover {
+                                        background-color: #0ca914;
+                                    }
+
+
+
+

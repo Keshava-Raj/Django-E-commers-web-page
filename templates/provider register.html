@@ -1,0 +1,28 @@
+{% extends 'providerLogin.html' %}
+{% load static %}
+
+{% block form %}
+
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<div class="container">
+  
+<form class="form" method="POST" action="{% url 'sucssessfulllogin' %}">
+  {% csrf_token %}
+  <h2> Register SigUp</h2>
+  <div class="minecontainer">
+  {% if messages %}
+  {% for message in messages %}
+  {{ form.non_field_errors }}
+      <div class="alert">{{ message }}</div>
+  {% endfor %}
+ {% endif %}
+</div>
+
+  {{ form.as_p }} 
+
+  <button type="submit" class="btn-submit">Register</button>
+  <P>If You Have a already Account then Click on<a href="{% url 'ProviderLogin' %}"> Login </a></P>
+
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'sbasefile.html' %}
+
+{% load static %}
+
+    {% include 'cdnlines.html' %}
+
+
+      {% block content %}
+
+    <div class="row featurette text_center">
+        <div class="col-md-7 mt-4" class="img-fluid">
+          <h2 class="featurette-heading fw-normal lh-1  text-center"> About AIS E-Bike Rentals</h2> 
+          <p class="lead text-center mt-4">  Welcome to AIS E-Bike Rentals, where we revolutionize the way people commute and explore their surroundings.
+             At AIS, we believe in harnessing the power of technology to create seamless and sustainable solutions for urban mobility. AIS E-Bike Rentals operates on a unique concept of bike sharing,
+             where users can contribute their bikes when not in use, allowing others to rent them conveniently. 
+            This innovative approach promotes resource optimization, reduces carbon footprint, and fosters a sense of community among riders. </p>
+          
+            <div class="container-fluid text_center1" >
+              <div class ="row">
+            
+                <div class = "col-mf-4 m-4" > 
+                  <h1 class="text-right m-4">5000+</h1>
+                  <p class="text-right m-4"> We Have Bikes   </p>
+                  
+                  <h1 class="text-center m-4">18+</h1>
+                  <p class="text-center m-4"> We Are Coordenated Companies  </p>
+                  
+                </div>
+             
+              </div>
+
+            </div> 
+        </div>
+        
+        <div class="col-md-5">
+          <img src= "{% static 'images/image100.jpg' %}"  class="mt-4 mb-4 br-4" width="460" height="400"  role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          
+        </div>
+      </div>
+      
+      
+<div class="card text-bg-dark">
+  <img src="data:image/jpeg;base64,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"  width="400" height="460" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h3 class="card-title text-center text_center1">How It Works</h3>
+        <p class="card-text text-center text_center1 "> Joining AIS E-Bike Rentals is simple. Users can sign up on our platform,<br> 
+          either as bike contributors or riders. Bike contributors can list their bikes for rental when idle, <br>
+          while riders can browse through available options and book their preferred e-bikes for their journey.
+        </p>
+    
+        
+    <div class="container-fluid">
+      <div class ="row">
+    
+        <div class = "clo-mf-2 m-4" > 
+          <img src= "https://th.bing.com/th/id/OIP.vWTl8TAgwxi6YubldckEiQHaEH?rs=1&pid=ImgDetMain" 
+        class="mt-4 mb-4 br-4" width="500" height="220"  role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+        </div>
+              
+      </div>
+    </div>
+      
+  </div>
+</div>
+
+  <hr>
+  <br>
+      
+  {% endblock %}
+
+

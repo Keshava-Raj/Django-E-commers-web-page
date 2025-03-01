@@ -1,0 +1,40 @@
+{% extends 'Basefileuser.html' %}
+{% load static %}
+
+{% block text %}
+
+<main>
+  
+  <div class="container-132">
+    
+    <div class='row'>
+      
+      <div class="col">
+        
+      <h1 class="fst-italic text-center">Vehicles Provider Details</h1>
+      <h4 class="fst-italic "> Full Name &emsp;&emsp;&#160; &#160;&#160;  &#160;  :  {{ provider.name }} </h4>
+      <h4 class="fst-italic "> User Nmae &emsp;&emsp;&emsp;&#160;  :  {{ provider.username }} </h4>
+      <h4 class="fst-italic "> Emai-id &emsp;&emsp;&emsp;&#160;&#160; &#160;&#160;   :  {{ provider.email }} </h4>
+      <h4 class="fst-italic "> Phone Number &#160; &#160;  &#160; :  {{ provider.phone_number   }} </h4>
+      <h4 class="fst-italic "> Gender &emsp;&emsp;&emsp;&#160; &#160; &#160;&#160;  :  {{ provider.gender }} </h4>
+      <h4 class="fst-italic "> Bank Account No &#160; :  {{ provider.bank_number  }} </h4>
+    </div>
+
+    <div class="col"> 
+      <h1 class="fst-italic text-center">hello&#160; {{ provider.name }}!!</h1>
+      <img src="{%static 'images/image10.jpg' %}"  height="100" class="profile" alt="...">
+    
+    <!-- <a href="{% url 'addvaickal' %}" class="btn btn-warning addvaikv "  data-bs-target="#signup" >Add Vehicle </a>
+    --> 
+    <a href="{% url 'addvaickal' %}" class="btn btn-warning addvaikv "  data-bs-target="#signup" >Add Vehicle </a>
+
+    </div>
+
+      </div>
+  </div>
+  
+</main>
+
+
+
+{% endblock  %}
