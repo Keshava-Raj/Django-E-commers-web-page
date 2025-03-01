@@ -1,0 +1,36 @@
+{% extends 'sbasefile.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration Form</title>
+</head> 
+{% block content %}
+<body class ="bodyR">
+<form method="POST" action="" class="register_form"  >
+    {% if messages %}
+     <ul class="h2R">
+         {% for message in messages %}
+         <li>{{ message }}</li>
+         {% endfor %}
+     </ul>
+    {% endif %}
+
+    {% csrf_token %}
+    <h2 class="h2R">User Registration</h2>
+    <input type="text" class="register_input" id="username" name='name' placeholder="full Name" required>
+    <input type="email" class="register_input" id="email" name='email'  placeholder="Email" required>
+    <input type="number" class="register_input" id="username" name='mobile'  placeholder="Phone number" required>
+    <input type="number" class="register_input" id="email" name='age'  placeholder="Age" required>
+    <input type="password" class="register_input"  id="password" name='paswd'  placeholder="Password" required>
+    <input type="password" class="register_input"  id="password" name='paswd1' placeholder="Conform Password" required>
+    <input type="submit" class="register_btn" action=" {% url 'userlogin' %}"  value="Register"><br>
+    
+</form>
+
+
+{% endblock %}
+</body> 
+</html>

@@ -1,0 +1,230 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Ais E-Bikes Rentals</title>
+    <link rel="stylesheet" href="{% static 'css/Stylesheet.css' %}">
+        {% include "cdnlines.html" %}
+
+
+
+<style>
+  
+/* Nav Bar */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: url('laptop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+  margin-top:-48px;
+  background-color: #EDE6CD;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+nav a:hover{
+  background-color: #f0f0f0;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+footer{
+  margin-top:-20px;
+}
+.margin_style{
+  margin-top:left;
+}
+.margin_s1tyle{
+  margin-top:center;
+}
+
+.textt4 a{
+        direction : none ;
+        margin-right: 10px;
+        color:rgb(0, 15, 10);
+        direction: none;
+    }
+    a{
+        direction:none;
+    }
+
+</style>
+
+
+</head>
+<body class="body-style">   
+
+  
+  <nav>
+    <ul>
+      <li><a href="#">Hello!! Rider </a></li>
+    <img src="{% static 'images/image1.png' %}" class="logo">
+      <li class="hideOnMobile"><a href="{% url 'about' %}">About</a></li>
+      <li class="hideOnMobile"><a href="{% url 'contact' %}">Contact Us</a></li>
+      <li class="hideOnMobile"><a href="{% url 'home' %}">Home</a></li>
+    </ul>
+  </nav>
+  
+<main>
+ 
+
+
+  {% block content %}
+
+  {% endblock %}
+
+
+
+                     <!-- login page -->
+  
+                     <form method="POST" classs="login_page" > 
+                      {% csrf_token %}
+                    <div class="styles-login" >
+                       <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog Margin2">
+                     <div class="modal-content Margin3">
+                    <div class="modal-header Margin3">
+                    <div class="container">
+                        <h2>
+                       <img src="{% static 'images/image1.png' %}" class="logo3 " > 
+                          <a href= "#"></a> Ais E-Bike Rentals </h2><hr>
+                               <h2>Login</h2>
+                                <form id="loginForm" >
+                                    <input type="text" id="username" name ="email1" placeholder="Username" required>
+                                    <input type="password" id="password" name ="passwrd1" placeholder="Password" required>
+                                   <a href="{% url 'dashboard' %}" > <input type="submit" action="" value="Login"> <br><br></a>
+                                    <H6 class="text-center"> Or</H6><hr>
+                                   <input type="register" value="Register">
+                     </form>
+                    <p class="error-message" id="errorMessage"></p>
+                    </div>
+                    </div>
+                     </div>
+                        </div>
+                     </div> 
+                     </form>
+
+                                              <!-- FOOTER  -->
+
+<footer class="footer">
+  <div class="container1231" >
+
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <img src= "{% static 'images/image1.png' %}" class="logo2 " height="80" width="90" ><br><br>
+        <h3><a href="contact.html">Ais E-Bikes Rentals</a> </h3>
+           
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Socieal Media Apps</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item  mb-2"><a href="#" class="nav-link p-0  text-body-warning">Our Youtube Channel</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Whatsapp</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Telegrame</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5> Contact Us</h5> 
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">📞: 7889889789</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning"> 📧 Chitti@AisCompany.com </a></li>
+        <li class="nav-item mb-2"><a href="{% url 'home' %}" class="nav-link p-0 text-body-warning">Home</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'about' %}"class="nav-link p-0 text-body-warning">About Us</a></li>
+        <li class="nav-item mb-2"> <a href="{% url 'contact' %}" class="nav-link p-0 text-body-warning">Contact Us</a></li>
+      </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <h3>About Us</h3>
+        <p>Ais E-bike company is provide the Rental Bikes which is <br>
+          usefull for your Regular works and We Create income for  <br>
+           the people who have Bike and it is not usefull   <br>
+          for them </p>   
+      
+          </div>
+        </form>
+      </div>
+    </div>
+
+    </div>
+
+
+</div>
+  
+  </footer>
+
+</main>      
+  </body>
+</html>
+]

@@ -1,0 +1,35 @@
+{% extends 'Basefileuser.html' %}
+{% load static %}
+
+
+{% block text %}
+
+  <div class="container-fluid">
+ 
+    <div class="container-fluid style3">
+
+      <div class="row style3">
+        {% for i in names  %}
+        <div class="col-md-4 mt-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{ i.image.url }}"  height="150" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ i.Vai_name }} </h5>
+              <p class="card-text text-center"> {{ i.cost }}Per Day Or <br> {{ i.cost_per_hr }} Per KM <br> </p>
+              <a href="#" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signup" href="#">Edit the details</a>
+            <a href="#" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#signup" href="#" >Delete </a>
+          </div>
+        </div>
+        </div>
+        {% endfor %} 
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- START THE FEAT  URETTES -->
+
+
+    <hr class="featurette-divider"> 
+  {% endblock  %}

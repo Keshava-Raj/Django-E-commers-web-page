@@ -1,0 +1,337 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>User Dashaboard</title>
+    <link rel="stylesheet" href="{% static 'css/Stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Stylesheet.css' %}">
+    {% include 'cdnlines.html' %}
+
+    <style>
+
+      *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          background: url('laptop.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav{
+          margin-top:-48px;
+          background-color: #EDE6CD;
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul{
+          width: 100%;
+          list-style: none;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        nav li{
+          height: 50px;
+        }
+        nav a{
+          height: 100%;
+          padding: 0 30px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          color: black;
+        }
+        nav a:hover{
+          background-color: #f0f0f0;
+        }
+        nav li:first-child{
+          margin-right: auto;
+        }
+        .sidebar{
+          position: fixed;
+          top: 0; 
+          right: 0;
+          height: 100vh;
+          width: 250px;
+          background-color: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(12px);
+          box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+          list-style: none;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+        .sidebar li{
+          width: 100%;
+        }
+        .sidebar a{
+          width: 100%;
+        }
+        .menu-button{
+          display: none;
+        }
+        @media(max-width: 800px){
+          .hideOnMobile{
+            display: none;
+          }
+          .menu-button{
+            display: block;
+          }
+        }
+        @media(max-width: 400px){
+          .sidebar{
+            width: 100%;
+          }
+        }
+      footer{
+          margin:-20px;
+      }
+      .margin_style{
+          margin-top:left;
+      }
+      .margin_s1tyle{
+          margin-top:center;
+      }
+      
+  
+  </style>
+
+
+</head>
+<body class="body-style">   
+ 
+  <nav>
+    <ul>
+      <li><a href="#">Hello!! Rider </a></li>
+    <img src="{% static 'images/image1.png' %}" class="logo">
+      <li class="hideOnMobile"><a href="{% url 'dashboard' %}">Bikes</a></li>
+      <li class="hideOnMobile"><a href="{% url 'about' %}">About</a></li>
+      <li class="hideOnMobile"><a href = "#">My details</a></li>
+      <li class="hideOnMobile"><a href = "{% url 'home' %}">Logout</a></li>
+    </ul>
+  </nav>
+  
+<div class="container-fluid">
+
+<main>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src= "{%static 'images/image13.jpg' %}" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      </div>
+      <div class="carousel-item">
+        <img src="{%static 'images/image16.jpg' %}" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      </div>
+      <div class="carousel-item">
+        <img src= "{%static 'images/image11.jpg' %}" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<hr>
+
+
+  <div class="container-fluid style3">
+    <div class="row style3">
+
+      <div class="col-md-3 mt-3">
+        <div class="card" style=" 99 Per KM  width: 18rem;">
+          <img src="{%static 'images/image4.jpg' %}"  height="150" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Palser Pasan Pro </h5>
+            <p class="card-text text-center">   8996 Per Day Or <br> 99 Per KM   <br> </p>
+            <a class="btn btn-warning" href="{% url 'Bikebooking' %}">Book The Bike </a>
+        </div>
+        </div>
+      </div>  
+
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'images/image5.jpg' %}" class="card-img-top" height="150" alt="...">
+          <div class="card-body"> 
+            <h5 class="card-title text-center">Roayl Enfield </h5>
+            <p class="card-text text-center">   8996 Per Day Or <br> 99 Per KM   <br> </p>
+            <a href="#" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+      </div>
+    </div> 
+      </div>
+
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'images/image1.jpg' %}"  height="150" class="card-img-top" alt="image1">
+          <div class="card-body">
+            <h5 class="card-title text-center">Activa Scooty </h5>
+            <p class="card-text text-center">   8996 Per Day Or <br> 99 Per KM   <br> </p>
+            <a href="#" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+        </div>
+        </div>
+
+      </div>
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'images/image32.jpeg' %}"  height="150" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Royal Enfield </h5>
+            <p class="card-text text-center">  8996 Per Day Or <br> 99 Per KM   <br> </p>
+            <a href="#" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'images/image24.jpeg' %}"  height="150" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Royal Enfield Jawa Pro </h5>
+            <p class="card-text text-center">  8996 Per Day Or <br> 99 Per KM  <br> </p>
+            <a href="#" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'images/image45.jpeg' %}"  height="150" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"> Palser </h5>
+            <p class="card-text text-center"> 8996 Per Day Or <br> 99 Per KM  <br> </p>
+            <a href="#" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'images/image36.png' %}"  height="150" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Hero... </h5>
+            <p class="card-text text-center"> 8996 Per Day Or <br> 99 Per KM <br> </p>
+            <a href="#" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signup" href="#">Book The Bike </a>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'images/image39.jpeg' %}"  height="150" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">XIReme </h5>
+            <p class="card-text text-center">8996 Per Day Or <br> 99 Per KM <br> </p>
+            <a href="#" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#signup" href="#" >Book The Bike </a>
+        </div>
+        </div>
+
+      </div>
+      </div>
+
+    </div>
+
+    <hr class="featurette-divider"> 
+
+
+                     <!-- login page -->
+  
+<form method="post" classs="login_page" >
+<div class="styles-login" >
+   <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog Margin2">
+ <div class="modal-content Margin3">
+<div class="modal-header Margin3">
+<div class="container">
+    <h2>
+   <img src="{% static 'images/image1.png' %}" class="logo3 " >
+      <a href= "#"></a> Ais E-Bike Rentals </h2><hr>
+           <h2>Login</h2>
+            <form id="loginForm" >
+                <input type="text" id="username" name ="email" placeholder="Username" required>
+                <input type="password" id="password" name ="passwrd" placeholder="Password" required>
+                <input type="submit" value="Login"> <br><br>
+                <H6 class="text-center"> Or</H6><hr>
+               <input type="register" value="Register">
+ </form>
+<p class="error-message" id="errorMessage"></p>
+</div>
+</div>
+ </div>
+    </div>
+ </div> 
+ </form>
+                                          <!-- FOOTER  -->
+<footer class="footer">
+  <div class="container1231" >
+
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <img src= "{% static 'images/image1.png' %}" class="logo2 " height="80" width="90" ><br><br>
+        <h3><a href="contact.html">Ais E-Bikes Rentals</a> </h3>
+           
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Socieal Media Apps</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item  mb-2"><a href="#" class="nav-link p-0  text-body-warning">Our Youtube Channel</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Whatsapp</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">Telegrame</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5> Contact Us</h5> 
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">📞: 7889889789</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning"> 📧 Chitti@AisCompany.com </a></li>
+        <li class="nav-item mb-2"><a href="{% url 'home' %}" class="nav-link p-0 text-body-warning">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-warning">About Us</a></li>
+        <li class="nav-item mb-2"> <a href="{% url 'contact' %}" class="nav-link p-0 text-body-warning">Contact Us</a></li>
+      </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <h3>About Us</h3>
+        <p>Ais E-bike company is provide the Rental Bikes which is <br>
+          usefull for your Regular works and We Create income for  <br>
+           the people who have Bike and it is not usefull   <br>
+          for them </p>   
+      
+          </div>
+        </form>
+      </div>
+    </div>
+
+    </div>
+
+
+</div>
+  
+  </footer>
+
+</main>      
+  </body>
+</html>
+]
